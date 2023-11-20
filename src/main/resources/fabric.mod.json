@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "modid",
+	"version": "${version}",
+	"name": "isoview",
+	"description": "Isometric view in minecraft",
+	"authors": [
+		"Avotien"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": "https://github.com/"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/isoview/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"io.avotien.isoview.IsoView"
+		],
+		"client": [
+			"io.avotien.isoview.IsoViewClient"
+		]
+	},
+	"mixins": [
+		"isoview.mixins.json",
+		{
+			"config": "isoview.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.24",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
